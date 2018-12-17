@@ -15,6 +15,10 @@ import { ConsoleService } from "../console.service";
       provide: LogDebugger,
       useFactory: consoleService => new LogDebugger(consoleService, true),
       deps: [ConsoleService]
+    },
+    {
+      provide: "apiUrl",
+      useValue: "http://localhost:4200/api"
     }
   ]
 })
