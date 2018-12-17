@@ -1,11 +1,12 @@
 import { LogDebugger } from "./log-debugger.service";
 import { Injectable, Inject } from "@angular/core";
+import { BASE_URL } from "./app.tokens";
 
 @Injectable()
 export class OtherDataService {
   constructor(
     private logDebugger: LogDebugger,
-    @Inject("apiUrl") private apiUrl
+    @Inject(BASE_URL) private apiUrl
   ) {}
 
   items: Array<any> = [

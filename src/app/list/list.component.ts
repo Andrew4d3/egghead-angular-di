@@ -3,6 +3,7 @@ import { DataService } from "../data.service";
 import { OtherDataService } from "../other-data.service";
 import { LogDebugger } from "../log-debugger.service";
 import { ConsoleService } from "../console.service";
+import { BASE_URL } from "../app.tokens";
 
 @Component({
   selector: "app-list",
@@ -17,7 +18,7 @@ import { ConsoleService } from "../console.service";
       deps: [ConsoleService]
     },
     {
-      provide: "apiUrl",
+      provide: BASE_URL,
       useValue: "http://localhost:4200/api"
     }
   ]
